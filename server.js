@@ -5,16 +5,25 @@ const app = express()
 //presentará la información por el HTML
 app.use(express.static(__dirname + '/public'));
 
-// app.get('/', (req, res) => {
-//     //res.send('Hello World')
-//     let out = {
-//         nombre: 'Juan',
-//         edad: 26,
-//         url: req.url
-//     };
+//Express HBS engine
+app.set('view engine', 'hbs');
 
-//     res.send(out);
-// });
+app.get('/', (req, res) => {
+    //Es una manera de mostrar datos en el navegador
+    //res.send('Hello World')
+    // let out = {
+    //     nombre: 'Juan',
+    //     edad: 26,
+    //     url: req.url
+    // };
+
+    // res.send(out);
+
+    res.render('home', {
+        name: 'Juan',
+        year: new Date().getFullYear()
+    });
+});
 
 app.get('/data', (req, res) => {
     res.send('Hello World')
