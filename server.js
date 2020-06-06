@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const hbs = require('hbs');
+require('./hbs/helpers/helpers');
 
 //Se crea un Middleware qye llamará a un callback y
 //presentará la información por el HTML
@@ -22,13 +23,13 @@ app.get('/', (req, res) => {
     // res.send(out);
 
     res.render('home', {
-        name: 'Juan',
-        year: new Date().getFullYear()
+        name: 'Juan espiNoza',
+        //year: new Date().getFullYear()
     });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { year: new Date().getFullYear() });
+    res.render('about');
 });
 
 app.get('/data', (req, res) => {
