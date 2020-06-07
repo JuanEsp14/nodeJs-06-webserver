@@ -1,24 +1,25 @@
 {
-  "name": "nodejs-06-webserver",
-  "version": "1.0.0",
-  "description": "First webserver with NodeJS",
-  "main": "app.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JuanEsp14/nodeJs-06-webserver.git"
-  },
-  "author": "Juan Espinoza",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JuanEsp14/nodeJs-06-webserver/issues"
-  },
-  "homepage": "https://github.com/JuanEsp14/nodeJs-06-webserver#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "save": "^2.4.0"
-  }
+    "name": "nodejs-06-webserver",
+    "version": "1.0.0",
+    "description": "First webserver with NodeJS",
+    "main": "app.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JuanEsp14/nodeJs-06-webserver.git"
+    },
+    "author": "Juan Espinoza",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JuanEsp14/nodeJs-06-webserver/issues"
+    },
+    "homepage": "https://github.com/JuanEsp14/nodeJs-06-webserver#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "save": "^2.4.0"
+    }
 }

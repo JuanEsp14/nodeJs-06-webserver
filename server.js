@@ -3,6 +3,10 @@ const app = express()
 const hbs = require('hbs');
 require('./hbs/helpers/helpers');
 
+//Heroku te permite el acceso a unas variables de entorno
+//globales para poder saber en qué puerto correrá mi app
+const port = process.env.PORT || 8080;
+
 //Se crea un Middleware qye llamará a un callback y
 //presentará la información por el HTML
 app.use(express.static(__dirname + '/public'));
@@ -36,6 +40,6 @@ app.get('/data', (req, res) => {
     res.send('Hello World')
 });
 
-app.listen(8080, () => {
-    console.log("Escuchando peticiones en el puerto 8080");
+app.listen(port, () => {
+    console.log(`Escuchando peticiones en el puerto ${{port}}`);
 });
